@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Alunos</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <div class="box1">
+        <form action="">
+            <fieldset>
+                <legend><strong> Cadastro de Alunos</strong></legend>
+
+                <div class="inputBox">
+                    <input type="text" name="nome" id="nome" class="inputUser" autocomplete="off" required="required">
+                    <label for="nome" class="labelInput">Nome completo</label>
+                </div>
+                <br><br>
+                <div class="inputBox">
+                    <input type="text" name="email" id="email" class="inputUser" autocomplete="off" required="required">
+                    <label for="email" class="labelInput">Email</label>
+                </div>
+                <br><br>
+                <div class="inputBox">
+                    <input type="tel" name="telefone" id="telefone" pattern="[0-9]{2}-[0-9]{4,6}-[0-9]{3,4}$"
+                        class="inputUser" autocomplete="off" required="required">
+                    <label for="telefone" class="labelInput">Telefone</label>
+                </div>
+                <br><br>
+                <!------ <p>Genêro</p>
+                <input type="radio" name="genero" id="feminino" value="feminino">
+                <label for="feminino">Feminino</label>
+                <br>
+                <input type="radio" name="genero" id="masculino" value="masculino">
+                <label for="masculino">Masculino </label>
+                <br>
+                <input type="radio" name="genero" id="outro" value="outro">
+                <label for="outro">Outro</label>
+                <br><br>
+                ----->
+                <label for="dataNascimento"><b>Data de Nascimento: </b> </label>
+                <input type="date" name="dataNascimento" id="dataNascimento" required="required">
+                <br><br><br>
+
+
+                <div class="inputBox">
+                    <input type="text" name="nota" id="nota" class="inputUser" autocomplete="off" required="required">
+                    <label for="nota" class="labelInput">Nota Final</label>
+                </div>
+
+                <br><br>
+                <input type="button" name="submit" id="submit" value="Cadastrar" onclick="cadastrarAluno()">
+
+            </fieldset>
+        </form>
+    </div>
+
+    <div class="box2">
+
+        <fieldset>
+            <legend><b>Lista de Alunos</b> </legend>
+            <br>
+            <div id="listarUsuarios" class="listaUsuarios">
+
+            </div>
+
+        </fieldset>
+
+    </div>
+
+    <div class="box3">
+        <form action="">
+            <fieldset>
+                <legend><b>Dados do Aluno</b> </legend>
+                <br>
+                <div class="">
+                    Nome completo: <span id="idNome"></span>
+                </div>
+                <br><br>
+                <div class="">
+                    Email: <span id="idEmail"></span>
+                </div>
+                <br><br>
+                <div class="">
+                    Telefone: <span id="idTelefone"></span>
+                </div>
+                <br><br>
+                <div class="">
+                    Data de Nascimento: <span id="idNascimento"></span>
+                </div>
+                <br><br>
+                <div class="">
+                    Nota Final: <span id="idNota"></span>
+                </div>
+                <br><br>
+                <input type="button" name="submit" id="botaoEditar" value="Editar" onclick="editarDadosAluno()">
+            </fieldset>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
